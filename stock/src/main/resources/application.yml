@@ -1,0 +1,12 @@
+server:
+  port: 8011
+
+spring:
+  application:
+    name: stock
+  cloud:
+    nacos:
+      discovery:
+        username: nacos
+        password: nacos
+      server-addr: 192.168.0.107:5000/nacos
