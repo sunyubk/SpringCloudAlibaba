@@ -8,11 +8,20 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 /**
- * 全局负载均衡配
- */
+ * @Description 全局负载均衡配
+ * @Author sy
+ * @Date 2023/3/5
+ * @Version 1.0
+ **/
 @Component
 public class GlobalRibbonConfig {
 
+    /**
+     * @Description 配置自定义负载均衡规则
+     * @Author sy
+     * @Date 2023/3/5
+     * @Version 1.0
+     **/
     @Bean
     public IRule iRule() {
         // 实现带有权重的负载均衡策略

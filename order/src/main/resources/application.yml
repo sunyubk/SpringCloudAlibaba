@@ -10,3 +10,23 @@ spring:
         username: nacos
         password: nacos
       server-addr: 192.168.0.107:5000/nacos
+
+logging:
+  level:
+    # 指定对应包的日志级别
+    com.sy.springcloud.service.openFeign: debug
+
+## feign局部配置
+#feign:
+#  client:
+#    config:
+#      # 对应的服务实例名称
+#      stock:
+#        # 日志级别
+#        logger-level: basic
+#        # 契约模式，还原Feign原生注解
+#        contract: feign.Contract.Default
+#        # 连接超时时间配置
+#        connect-timeout: 5000
+#        # 请求处理超时时间配置
+#        read-timeout: 10000
