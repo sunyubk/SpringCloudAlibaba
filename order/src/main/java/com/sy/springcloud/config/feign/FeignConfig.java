@@ -29,16 +29,16 @@ public class FeignConfig {
         return Logger.Level.FULL;
     }
 
-    /**
-     * @Description 契约模式，将OpenFeign注解还原成原生注解，基本不会使用到
-     * @Author sy
-     * @Date 2023/3/5
-     * @Version 1.0
-     **/
-    @Bean
-    public Contract feignContract() {
-        return new Contract.Default();
-    }
+    // /**
+    //  * @Description 契约模式，将OpenFeign注解还原成原生注解，基本不会使用到
+    //  * @Author sy
+    //  * @Date 2023/3/5
+    //  * @Version 1.0
+    //  **/
+    // @Bean
+    // public Contract feignContract() {
+    //     return new Contract.Default();
+    // }
 
     /**
      * @Description 超时时间配置，第一个参数配置的是连接超时时间，第二个参数配置的是请求处理超时时间

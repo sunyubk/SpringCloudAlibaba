@@ -25,6 +25,10 @@
         <spring.cloud.version>Hoxton.SR12</spring.cloud.version>
         <spring.boot.version>2.3.12.RELEASE</spring.boot.version>
         <nacos.version>2.1.0.RELEASE</nacos.version>
+        <mysql-version>8.0.30</mysql-version>
+        <mybatisPlus.version>1.0.5</mybatisPlus.version>
+        <sentinel.core.version>1.8.6</sentinel.core.version>
+        <lombok.verison>1.18.24</lombok.verison>
     </properties>
 
     <dependencies>
@@ -80,20 +84,38 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!--<dependency>-->
-            <!--    <groupId>com.alibaba.cloud</groupId>-->
-            <!--    <artifactId>spring-cloud-starter-alibaba-nacos-config-server</artifactId>-->
-            <!--    <version>${nacos.version}</version>-->
-            <!--    <type>pom</type>-->
-            <!--    <scope>import</scope>-->
-            <!--</dependency>-->
-            <!--<dependency>-->
-            <!--    <groupId>com.alibaba.cloud</groupId>-->
-            <!--    <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
-            <!--    <version>${nacos.version}</version>-->
-            <!--    <type>pom</type>-->
-            <!--    <scope>import</scope>-->
-            <!--</dependency>-->
+
+            <!-- Mysql驱动包 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.baomidou/mybatisplus-spring-boot-starter -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatisplus-spring-boot-starter</artifactId>
+                <version>${mybatisPlus.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.alibaba.csp/sentinel-core -->
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-core</artifactId>
+                <version>${sentinel.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-annotation-aspectj</artifactId>
+                <version>${sentinel.core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.verison}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

@@ -4,12 +4,15 @@ server:
 spring:
   application:
     name: order
+  profiles:
+    active: dev
   cloud:
     nacos:
       discovery:
         username: nacos
         password: nacos
       server-addr: 192.168.0.107:5000/nacos
+
 
 logging:
   level:
