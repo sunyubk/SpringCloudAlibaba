@@ -6,12 +6,6 @@ spring:
     name: order
   profiles:
     active: dev
-  cloud:
-    nacos:
-      discovery:
-        username: nacos
-        password: nacos
-      server-addr: 192.168.0.107:5000/nacos
 
 
 logging:
@@ -33,3 +27,6 @@ logging:
 #        connect-timeout: 5000
 #        # 请求处理超时时间配置
 #        read-timeout: 10000
+#feign:
+#  sentinel:
+#    enabled: true

@@ -27,7 +27,7 @@
         <nacos.version>2.1.0.RELEASE</nacos.version>
         <mysql-version>8.0.30</mysql-version>
         <mybatisPlus.version>1.0.5</mybatisPlus.version>
-        <sentinel.core.version>1.8.6</sentinel.core.version>
+        <sentinel.core.version>1.8.5</sentinel.core.version>
         <lombok.verison>1.18.24</lombok.verison>
     </properties>
 
@@ -76,6 +76,11 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-actuator</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
             <!--nacosnacos服务注册发现-->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
@@ -109,12 +114,6 @@
                 <groupId>com.alibaba.csp</groupId>
                 <artifactId>sentinel-annotation-aspectj</artifactId>
                 <version>${sentinel.core.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>${lombok.verison}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
