@@ -11,7 +11,11 @@ import com.alibaba.csp.sentinel.slots.block.degrade.DegradeRule;
 import com.alibaba.csp.sentinel.slots.block.degrade.DegradeRuleManager;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
+import com.sy.springcloud.common.handler.MyFactory;
+import com.sy.springcloud.service.impl.MyFactoryDemo1;
+import com.sy.springcloud.service.impl.MyFactoryDemo2;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -77,7 +81,7 @@ public class SentinelController {
      * blockHandler: 被流控降级后的处理方法(默认该方法必须生命在同一个类中)（优先级高于fallback）
      * blockHandlerClass: 可以将处理方法放到别的类中
      * fallback: 异常的处理方法
-     * fallbackClass: 可以异常的处理方法放在白的类中
+     * fallbackClass: 可以异常的处理方法放在别的类中
      * ExceptionsToIgnore：排除异常不被fallback拦截
      * @Author sy
      * @Date 2023/3/6
@@ -194,5 +198,16 @@ public class SentinelController {
         DegradeRuleManager.loadRules(list);
 
     }
+
+    @Autowired
+    MyFactory myFactory;
+
+    @GetMapping("/getFactorysss")
+    public void getFactorysss() {
+        System.out.println(myFactory.getSP(MyFactoryDemo1.class).test());
+        System.out.println(myFactory.getSP(MyFactoryDemo2.class).test());
+
+    }
+
 
 }
