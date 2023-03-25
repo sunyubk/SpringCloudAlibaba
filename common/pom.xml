@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>common</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>11</java.version>

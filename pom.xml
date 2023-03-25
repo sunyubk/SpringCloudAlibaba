@@ -24,10 +24,11 @@
         <spring.cloud.alibaba.version>2.2.9.RELEASE</spring.cloud.alibaba.version>
         <spring.cloud.version>Hoxton.SR12</spring.cloud.version>
         <spring.boot.version>2.3.12.RELEASE</spring.boot.version>
-        <nacos.version>2.1.0.RELEASE</nacos.version>
+        <nacos.version>2.2.0.RELEASE</nacos.version>
         <mysql-version>8.0.30</mysql-version>
         <mybatisPlus.version>1.0.5</mybatisPlus.version>
-        <sentinel.core.version>1.8.5</sentinel.core.version>
+        <!-- <sentinel.core.version>1.8.5</sentinel.core.version> -->
+        <alibaba.sentinel.version>2.2.8.RELEASE</alibaba.sentinel.version>
         <lombok.verison>1.18.24</lombok.verison>
     </properties>
 
@@ -104,17 +105,25 @@
                 <version>${mybatisPlus.version}</version>
             </dependency>
 
+            <!-- https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-starter-alibaba-sentinel -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+                <version>${alibaba.sentinel.version}</version>
+            </dependency>
+
+
             <!-- https://mvnrepository.com/artifact/com.alibaba.csp/sentinel-core -->
-            <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-core</artifactId>
-                <version>${sentinel.core.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-annotation-aspectj</artifactId>
-                <version>${sentinel.core.version}</version>
-            </dependency>
+            <!-- <dependency> -->
+            <!--     <groupId>com.alibaba.csp</groupId> -->
+            <!--     <artifactId>sentinel-core</artifactId> -->
+            <!--     <version>${sentinel.core.version}</version> -->
+            <!-- </dependency> -->
+            <!-- <dependency> -->
+            <!--     <groupId>com.alibaba.csp</groupId> -->
+            <!--     <artifactId>sentinel-annotation-aspectj</artifactId> -->
+            <!--     <version>${sentinel.core.version}</version> -->
+            <!-- </dependency> -->
         </dependencies>
     </dependencyManagement>
 

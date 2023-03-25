@@ -3,7 +3,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://123.57.45.239:3306/springcloudalibaba?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&connectionTimeZone=GMT%2B8&allowMultiQueries=true
     username: root
-    data-password: root
+    password: root
 
   cloud:
     nacos:
@@ -14,8 +14,10 @@ spring:
     sentinel:
       transport:
         # 客户端ip，就是你要注册进Sentinel的服务的所在ip
-        client-ip: 192.168.0.101
+        client-ip: 192.168.0.103
+        port: 8719
         # Sentinel控制ip端口
         dashboard: 192.168.0.107:8858
+#        dashboard: localhost:8858
       # 服务启动自动注册到Sentinel的服务端
       eager: true
