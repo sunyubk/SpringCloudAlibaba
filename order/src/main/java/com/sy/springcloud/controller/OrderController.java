@@ -33,5 +33,13 @@ public class OrderController {
         return "Hello World:" + msg;
 
     }
+    @PostMapping("/addSentinel")
+    public String addSentinel() {
+        System.out.println("下单成功");
+        //String msg = restTemplate.postForObject("http://stock/stock/reduceStock", null, String.class);
+        String msg = stockService.reduceStock2();
+        return "Hello World:" + msg;
+
+    }
 
 }

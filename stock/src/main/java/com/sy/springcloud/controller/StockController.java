@@ -25,4 +25,10 @@ public class StockController {
         System.out.println("扣减库存");
         return "扣减库存"+port;
     }
+    @PostMapping(value = "/reduceStock2")
+    public String reduceStock2() {
+        int num = 1 / 0;
+        System.out.println("扣减库存");
+        return "扣减库存"+port;
+    }
 }

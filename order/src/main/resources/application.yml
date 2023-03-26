@@ -27,6 +27,6 @@ logging:
 #        connect-timeout: 5000
 #        # 请求处理超时时间配置
 #        read-timeout: 10000
-#feign:
-#  sentinel:
-#    enabled: true
+feign:
+  sentinel:
+    enabled: true

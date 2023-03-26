@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
  * @Date 2023/3/5
  * @Version 1.0
  **/
-@FeignClient(name = "stock", path = "/stock")
+@FeignClient(name = "stock", path = "/stock", fallback = StockSentinelFallback.class)
 public interface Stock {
 
     /**
@@ -25,4 +25,7 @@ public interface Stock {
      **/
     @PostMapping(value = "/reduceStock")
     public String reduceStock();
+
+    @PostMapping(value = "/reduceStock2")
+    public String reduceStock2();
 }
