@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class StockSentinelFallback implements Stock{
     @Override
     public String reduceStock() {
-        return null;
+        return "流控11";
     }
 
     @Override

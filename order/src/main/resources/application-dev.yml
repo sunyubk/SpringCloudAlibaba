@@ -21,3 +21,12 @@ spring:
 #        dashboard: localhost:8858
       # 服务启动自动注册到Sentinel的服务端
       eager: true
+      datasource:
+        order_sentinel:
+          nacos:
+            server-addr: 192.168.0.107:5000/nacos
+            username: nacos
+            password: nacos
+            data-id: order-sentinel
+            namespace: public
+            rule-type: flow

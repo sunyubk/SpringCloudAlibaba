@@ -58,6 +58,10 @@
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
             <version>${alibaba.sentinel.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
+        </dependency>
 
         <!-- 引入springCloudAlibaba-sentinel，这里就可以注释掉了 -->
         <!-- <dependency> -->

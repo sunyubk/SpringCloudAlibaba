@@ -1,5 +1,6 @@
 package com.sy.springcloud.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.sy.springcloud.service.openFeign.Stock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,6 +27,7 @@ public class OrderController {
      * @return String
      */
     @PostMapping("/add")
+    @SentinelResource("/flow/add")
     public String add() {
         System.out.println("下单成功");
         //String msg = restTemplate.postForObject("http://stock/stock/reduceStock", null, String.class);
