@@ -2,7 +2,9 @@ package com.sy.springcloud.service.openFeign;
 
 import com.sy.springcloud.config.feign.FeignConfig;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @Description
@@ -28,4 +30,7 @@ public interface Stock {
 
     @PostMapping(value = "/reduceStock2")
     public String reduceStock2();
+
+    @GetMapping("/rdStock")
+    public String rdStock(@RequestParam("proid") Integer proid, @RequestParam("num") Integer num);
 }

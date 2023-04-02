@@ -10,3 +10,31 @@ spring:
         username: nacos
         password: nacos
       server-addr: 192.168.0.107:5000/nacos
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://123.57.45.239:3306/springcloudalibaba?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&connectionTimeZone=GMT%2B8&allowMultiQueries=true
+    username: root
+    password: root
+mybatis-plus:
+  mapper-locations: classpath:com/sy/springcloud/mapper/*Mapper.xml
+  type-aliases-package: com.sy.springcloud.entity
+  configuration:
+    map-underscore-to-camel-case: true
+seata:
+  tx-service-group: default_tx_group
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      group: SEATA_GROUP
+      server-addr: 192.168.0.107:5000/nacos/
+      username: nacos
+      password: nacos
+  config:
+    type: nacos
+    nacos:
+      application: seata-server
+      group: SEATA_GROUP
+      server-addr: 192.168.0.107:5000/nacos/
+      username: nacos
+      password: nacos

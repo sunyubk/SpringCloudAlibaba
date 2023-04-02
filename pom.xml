@@ -26,7 +26,7 @@
         <spring.boot.version>2.3.12.RELEASE</spring.boot.version>
         <nacos.version>2.2.0.RELEASE</nacos.version>
         <mysql-version>8.0.30</mysql-version>
-        <mybatisPlus.version>1.0.5</mybatisPlus.version>
+        <mybatisPlus.version>3.5.2</mybatisPlus.version>
         <!-- <sentinel.core.version>1.8.5</sentinel.core.version> -->
         <alibaba.sentinel.version>2.2.8.RELEASE</alibaba.sentinel.version>
         <lombok.verison>1.18.24</lombok.verison>
@@ -98,10 +98,10 @@
                 <version>${mysql-version}</version>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/com.baomidou/mybatisplus-spring-boot-starter -->
+            <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
             <dependency>
                 <groupId>com.baomidou</groupId>
-                <artifactId>mybatisplus-spring-boot-starter</artifactId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatisPlus.version}</version>
             </dependency>
 

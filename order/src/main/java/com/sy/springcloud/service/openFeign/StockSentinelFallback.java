@@ -20,4 +20,9 @@ public class StockSentinelFallback implements Stock{
     public String reduceStock2() {
         return "降级了2";
     }
+
+    @Override
+    public String rdStock(Integer proid, Integer num) {
+        return null;
+    }
 }
